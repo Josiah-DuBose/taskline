@@ -2,7 +2,7 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class User {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column()
@@ -10,6 +10,9 @@ export class User {
 
   @Column()
   lastName: string;
+
+  @Column()
+  password: string;
 
   @Column()
   email: string;
